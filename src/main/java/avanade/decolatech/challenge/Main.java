@@ -1,6 +1,7 @@
 package avanade.decolatech.challenge;
 
 import avanade.decolatech.challenge.persistence.migration.MigrationStrategy;
+import avanade.decolatech.challenge.ui.MainMenu;
 
 import java.sql.SQLException;
 
@@ -12,5 +13,6 @@ public class Main {
         try(var connection = getConnection()){
             new MigrationStrategy(connection).executeMigration();
         }
+        new MainMenu().execute();
     }
 }
