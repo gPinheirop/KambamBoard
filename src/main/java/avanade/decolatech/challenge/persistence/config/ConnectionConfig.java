@@ -14,8 +14,8 @@ public final class ConnectionConfig {
 
     public static Connection getConnection() throws SQLException {
         var url = "jdbc:mysql://localhost:3306/kambamboard";
-        var user = "kambamboard";
-        var password = "kambamboard";
+        var user = "root";
+        var password = "1234";
 
         var connection = DriverManager.getConnection(url, user, password);
 
